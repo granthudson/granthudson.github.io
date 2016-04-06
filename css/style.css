@@ -1,6 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:700);
+
+html {
+    overflow-y: scroll;
+}
+/*
 body {
 	background: white;
     margin-bottom: 50px;
@@ -21,6 +26,23 @@ h3.project-section{
 .panel-body{
     paddling-top: 0;
 }
+.navbar {
+    border-radius: 0px;
+    border-bottom: 1px solid;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    background-color: black;
+    margin-bottom: 50px;
+    min-height: 100px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 60px;
+    
+}
+.navbar-brand {
+    font-size: 25px;
+    font-family: 'PT Sans', sans-serif;
+}
 .container {
     width: 900px;
     background: white;
@@ -40,3 +62,4 @@ h3{
 h4{
     font-family: "Source Sans Pro", Arial, sans-serif;
 }
+*/
