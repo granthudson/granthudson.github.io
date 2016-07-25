@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Comparator Continuity Data</title>
+  <meta charset="UTF-8">
+
+<style type="text/css">
+	table.clean_table {
+		font-size: 12px;
+		border: 1px solid #CCC; 
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.clean_table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+	}
+	.clean_table th {
+		background-color: #104E8B; 
+		color: #FFF;
+		font-weight: bold;
+	}
+</style>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+
+
+$(document).ready(function(){
+
+	
+    $("div1").hide();
+    $("div2").hide();
+    $("div3").hide();
+    $("div4").hide();
+    $("div5").hide();
+    $("div6").hide();
+    $("div7").hide();
+    $("div8").hide();
+
+    $("#hide1").click(function(){
+        $("div1").hide();
+    });
+    $("#show1").click(function(){
+        $("div1").show();
+    });
+    $("#hide2").click(function(){
+        $("div2").hide();
+    });
+    $("#show2").click(function(){
+        $("div2").show();
+    });
+    $("#hide3").click(function(){
+        $("div3").hide();
+    });
+    $("#show3").click(function(){
+        $("div3").show();
+    });
+    $("#hide4").click(function(){
+        $("div4").hide();
+    });
+    $("#show4").click(function(){
+        $("div4").show();
+    });
+    $("#hide5").click(function(){
+        $("div5").hide();
+    });
+    $("#show5").click(function(){
+        $("div5").show();
+    });
+    $("#hide6").click(function(){
+        $("div6").hide();
+    });
+    $("#show6").click(function(){
+        $("div6").show();
+    });
+    $("#hide7").click(function(){
+        $("div7").hide();
+    });
+    $("#show7").click(function(){
+        $("div7").show();
+    });
+    $("#hide8").click(function(){
+        $("div8").hide();
+    });
+    $("#show8").click(function(){
+        $("div8").show();
+    });
+});
+</script>
+
+
+</head>
+
+<body>
+
+
+<h1><b>Comparator Continuity Data</b></h1>
+
+
+
+
+
+<label><b>Continuity Correct     </b><button id="show1">Show</button> <button id="hide1">Hide</button></label>
+
+<div1>
+<table class = "clean_table">
+<thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limit</th><th>Lower Limit</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
+ <tr><td>site 1</td><td>1.1</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.694</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>P</td><td>1</td><td>0.2</td><td>0.73</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.694</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.535</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>P</td><td>1</td><td>0.2</td><td>0.535</td><td>V</td><td>Cont Vee</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>site 2</td><td>1.1</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.694</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>P</td><td>1</td><td>0.2</td><td>0.73</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.694</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.536</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>P</td><td>1</td><td>0.2</td><td>0.535</td><td>V</td><td>Cont Vee</td></tr>
+</tbody></table>
+</div1>
+
+<br></br>
+
+<label><b>Open Socket     </b><button id="show2">Show</button> <button id="hide2">Hide</button></label>
+
+
+<div2>
+<table class="clean_table">
+<thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limit</th><th>Lower Limit</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
+ <tr><td>site 1</td><td>1.1</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.234</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>F</td><td>1</td><td>0.2</td><td>10.225</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.239</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.233</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>F</td><td>1</td><td>0.2</td><td>10.23</td><td>V</td><td>Cont Vee</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>site 2</td><td>1.1</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.234</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>F</td><td>1</td><td>0.2</td><td>10.225</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.239</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.233</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>F</td><td>1</td><td>0.2</td><td>10.23</td><td>V</td><td>Cont Vee</td></tr>
+</tbody></table>
+</div2>
+
+<br></br>
+
+<label><b>Open Socket No Wait     </b><button id="show3">Show</button> <button id="hide3">Hide</button></label>
+
+
+<div3>
+
+<table class="clean_table">
+<thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limit</th><th>Lower Limit</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
+ <tr><td>site 1</td><td>1.1</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.234</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>F</td><td>1</td><td>0.2</td><td>10.225</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.239</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.233</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>F</td><td>1</td><td>0.2</td><td>10.23</td><td>V</td><td>Cont Vee</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>site 2</td><td>1.1</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.234</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>F</td><td>1</td><td>0.2</td><td>10.225</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.239</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.233</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>F</td><td>1</td><td>0.2</td><td>10.23</td><td>V</td><td>Cont Vee</td></tr>
+</tbody></table>
+</div3>
+
+<br></br>
+
+<label><b>Chip Flipped     </b><button id="show4">Show</button> <button id="hide4">Hide</button></label>
+
+
+<div4>
+
+<table class="clean_table">
+<thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limits</th><th>Lower Limits</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
+ <tr><td>site 1</td><td>1.1</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.234</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>F</td><td>1</td><td>0.2</td><td>5.392</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.239</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.233</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>F</td><td>1</td><td>0.2</td><td>10.23</td><td>V</td><td>Cont Vee</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>site 2</td><td>1.1</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.234</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>F</td><td>1</td><td>0.2</td><td>5.389</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.239</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>F</td><td>-0.2</td><td>-1</td><td>-10.233</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>F</td><td>1</td><td>0.2</td><td>10.23</td><td>V</td><td>Cont Vee</td></tr>
+</tbody></table>
+
+
+
+
+</div4>
+
+<br></br>
+
+<label><b>Current Direction Wrong     </b><button id="show5">Show</button> <button id="hide5">Hide</button></label>
+
+
+<div5>
+
+<table class="clean_table">
+<thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limits</th><th>Lower Limits</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
+ <tr><td>site 1</td><td>1.1</td><td>F</td><td>-0.2</td><td>-1</td><td>10.231</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>F</td><td>1</td><td>0.2</td><td>-0.638</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>F</td><td>-0.2</td><td>-1</td><td>10.24</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.536</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>P</td><td>1</td><td>0.2</td><td>0.535</td><td>V</td><td>Cont Vee</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>site 2</td><td>1.1</td><td>F</td><td>-0.2</td><td>-1</td><td>10.231</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>F</td><td>1</td><td>0.2</td><td>-0.639</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>F</td><td>-0.2</td><td>-1</td><td>10.24</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.536</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>P</td><td>1</td><td>0.2</td><td>0.535</td><td>V</td><td>Cont Vee</td></tr>
+</tbody></table>
+
+
+
+
+
+</div5>
+
+
+<br></br>
+
+<label><b>100us Wait     </b><button id="show6">Show</button> <button id="hide6">Hide</button></label>
+<p>Original wait time was 10us</p>
+
+
+<div6>
+
+<table class="clean_table">
+<thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limits</th><th>Lower Limits</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
+ <tr><td>site 1</td><td>1.1</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.696</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>P</td><td>1</td><td>0.2</td><td>0.732</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.696</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.537</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>P</td><td>1</td><td>0.2</td><td>0.536</td><td>V</td><td>Cont Vee</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>site 2</td><td>1.1</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.696</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>P</td><td>1</td><td>0.2</td><td>0.732</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.696</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.537</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>P</td><td>1</td><td>0.2</td><td>0.536</td><td>V</td><td>Cont Vee</td></tr>
+</tbody></table>
+
+
+
+
+
+</div6>
+<br></br>
+
+<label><b>No Wait     </b><button id="show7">Show</button> <button id="hide7">Hide</button></label>
+
+
+<div7>
+
+<table class="clean_table">
+<thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limits</th><th>Lower Limits</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
+ <tr><td>site 1</td><td>1.1</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.697</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>P</td><td>1</td><td>0.2</td><td>0.732</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.697</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.537</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>P</td><td>1</td><td>0.2</td><td>0.537</td><td>V</td><td>Cont Vee</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>site 2</td><td>1.1</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.697</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>P</td><td>1</td><td>0.2</td><td>0.732</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.697</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.537</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>P</td><td>1</td><td>0.2</td><td>0.536</td><td>V</td><td>Cont Vee</td></tr>
+</tbody></table>
+
+
+
+</div7>
+
+<br></br>
+
+<label><b>Datalogged Wrong     <button id="show8">Show</button> <button id="hide8">Hide</button></b></label>
+
+
+<div8>
+
+<table class="clean_table">
+<thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limits</th><th>Lower Limits</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
+ <tr><td>site 1</td><td>1.1</td><td>F</td><td>-0.2</td><td>-1</td><td>-0.699</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>F</td><td>1</td><td>0.2</td><td>0.734</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>F</td><td>-0.2</td><td>-1</td><td>-0.699</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.539</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>P</td><td>1</td><td>0.2</td><td>0.538</td><td>V</td><td>Cont Vee</td></tr>
+ <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>site 2</td><td>1.1</td><td>F</td><td>-0.2</td><td>-1</td><td>-0.699</td><td>V</td><td>Cont Vinm</td></tr>
+ <tr><td>&nbsp;</td><td>1.2</td><td>F</td><td>1</td><td>0.2</td><td>0.734</td><td>V</td><td>Cont Vout</td></tr>
+ <tr><td>&nbsp;</td><td>1.3</td><td>F</td><td>-0.2</td><td>-1</td><td>-0.699</td><td>V</td><td>Cont Vinp</td></tr>
+ <tr><td>&nbsp;</td><td>1.4</td><td>P</td><td>-0.2</td><td>-1</td><td>-0.539</td><td>V</td><td>Cont Vcc</td></tr>
+ <tr><td>&nbsp;</td><td>1.5</td><td>P</td><td>1</td><td>0.2</td><td>0.538</td><td>V</td><td>Cont Vee</td></tr>
+</tbody></table>
+
+
+
+
+</div8>
+
+
+</body>
+</html>
