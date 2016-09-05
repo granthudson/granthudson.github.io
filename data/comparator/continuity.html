@@ -115,13 +115,10 @@ $(document).ready(function(){
 <body>
 
 
-<h1><b>Comparator Continuity Data</b></h1>
-
-
-
-
-
 <label><b>Continuity Correct     </b><button id="show1">Show</button> <button id="hide1">Hide</button></label>
+<p>The inputs and outputs are tested with VCC and VEE grounded, sourcing +1mA into the inputs Vinm and Vinp, and sinking -1mA out of the output Vo. 
+The rails are tested by sourcing +1mA into VCC with VEE grounded and sinking -1mA output VEE with VCC grouned. 
+The corresponding ESD diode drop is measured. </p>
 
 <div1>
 <table class = "clean_table">
@@ -143,7 +140,7 @@ $(document).ready(function(){
 <br></br>
 
 <label><b>Open Socket     </b><button id="show2">Show</button> <button id="hide2">Hide</button></label>
-
+<p>This data shows the continuity results if there is no chip in the socket. The test should fail this case indicating a misfeed into the socket. </p>
 
 <div2>
 <table class="clean_table">
@@ -165,7 +162,7 @@ $(document).ready(function(){
 <br></br>
 
 <label><b>Open Socket No Wait     </b><button id="show3">Show</button> <button id="hide3">Hide</button></label>
-
+<p>This data shows the continuity results if there is no chip in the socket without any wait between the test condition and the measurement. The test should fail this case indicating a misfeed into the socket. </p>
 
 <div3>
 
@@ -188,7 +185,7 @@ $(document).ready(function(){
 <br></br>
 
 <label><b>Chip Flipped     </b><button id="show4">Show</button> <button id="hide4">Hide</button></label>
-
+<p>This data shows the results if the chip is loaded upside-down in the socket. </p>
 
 <div4>
 
@@ -215,7 +212,7 @@ $(document).ready(function(){
 <br></br>
 
 <label><b>Current Direction Wrong     </b><button id="show5">Show</button> <button id="hide5">Hide</button></label>
-
+<p>This data shows the results if the direction of the currents into the input pins are negative relative to the "Continuity Correct" case. </p>
 
 <div5>
 
@@ -244,7 +241,7 @@ $(document).ready(function(){
 <br></br>
 
 <label><b>100us Wait     </b><button id="show6">Show</button> <button id="hide6">Hide</button></label>
-<p>Original wait time was 10us</p>
+<p>This data shows the effect of decreasing the wait time between setting up the instruments and taking the measurements from 100us to 10us.</p>
 
 
 <div6>
@@ -272,7 +269,7 @@ $(document).ready(function(){
 <br></br>
 
 <label><b>No Wait     </b><button id="show7">Show</button> <button id="hide7">Hide</button></label>
-
+<p>This data shows the effect of decreasing the wait time between setting up the instruments and taking the measurements from 100us to 0us.</p>
 
 <div7>
 
@@ -298,7 +295,7 @@ $(document).ready(function(){
 <br></br>
 
 <label><b>Datalogged Wrong     <button id="show8">Show</button> <button id="hide8">Hide</button></b></label>
-
+<p>This data shows the effect of setting up the test correctly for setting up the datalog incorrectly.</p>
 
 <div8>
 
