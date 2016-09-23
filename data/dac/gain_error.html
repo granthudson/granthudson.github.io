@@ -102,9 +102,17 @@ $(document).ready(function(){
 
 <body>
 
+<p>This test measures the zero-scale error and the gain error of the TLV5616 DAC. The zero-scale error test is performed by serially loading a binary 10 into the DAC and measuring Vo. 
+Since the zero-scale error can be positive or negative, a binary 10 is chosen to place the DAC out of the lower deadband. 
+The zero-scale error is then calculated by subtracting the 10 times the ideal VLSB from the measured value. </p>
+<p>The gain error is measured by serially loading a full-scale input into the DAC and measuring the full-scale output voltage. 
+The gain error is calcualted by subtracting the zero-scale error from the full-scale output voltage and finding the percent error relative to the ideal full-scale voltage. </p>
 
 <label><b>Chips 1-5, Sites 1 and 2     </b><button id="show1">Show</button> <button id="hide1">Hide</button></label>
-
+<p>This data set shows the measurements made on 5 different chips, 10 measurements/chip, for two different DIB sites.
+Looking through this dataset, students can start to see the effects of repeatability (looking across the 10 measurements/chip), reproducibility (looking across the different DIB sites with the same chip), 
+and process variation (looking across different chips with the same site).
+For all of these measurements, each result represents an average of 5 measurements using a volt meter (QMS) placed in the 10V range with an output low-pass filter cut-off frequency of 100kHz.</p>
 <div1>
 
 <br></br>
@@ -113,34 +121,34 @@ $(document).ready(function(){
 <table class="clean_table">
 <thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limit</th><th>Lower Limit</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
  <tr><td>test 1</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.006</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.006</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 2</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.001</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.001</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 3</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.003</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.003</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 4</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.008</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.008</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 5</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.009</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.009</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 6</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.006</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.006</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 7</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.001</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.001</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 8</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 9</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.006</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.006</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 10</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.004</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.004</td><td>%</td><td>GE</td></tr>
 </tbody></table>
 
 
@@ -155,34 +163,34 @@ $(document).ready(function(){
 <table class="clean_table">
 <thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limit</th><th>Lower Limit</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
  <tr><td>test 1</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.004</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.082</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.082</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 2</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.004</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.082</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.082</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 3</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.076</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.076</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 4</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.077</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.077</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 5</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.004</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.087</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.087</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 6</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.079</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.079</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 7</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.072</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.072</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 8</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.079</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.079</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 9</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.079</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.079</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 10</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.082</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.082</td><td>%</td><td>GE</td></tr>
 </tbody></table>
 
 
@@ -199,41 +207,35 @@ $(document).ready(function(){
 <table class="clean_table">
 <thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limit</th><th>Lower Limit</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
  <tr><td>test 1</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.007</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.023</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.023</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 2</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.006</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.018</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.018</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 3</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.006</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.018</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.018</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 4</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.006</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.011</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.011</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 5</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.006</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.019</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.019</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 6</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.007</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.026</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.026</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 7</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.006</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.016</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.016</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 8</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.007</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.026</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.026</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 9</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.006</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.019</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.019</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 10</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.006</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.013</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.013</td><td>%</td><td>GE</td></tr>
 </tbody></table>
-
-
-
-
-
-
 
 
 <br></br>
@@ -243,34 +245,34 @@ $(document).ready(function(){
 <table class="clean_table">
 <thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limit</th><th>Lower Limit</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
  <tr><td>test 1</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.002</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.051</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.051</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 2</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.002</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.049</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.049</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 3</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.002</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.052</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.052</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 4</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.002</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.054</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.054</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 5</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.002</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.059</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.059</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 6</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.002</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.044</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.044</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 7</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.002</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.052</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.052</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 8</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.002</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.047</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.047</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 9</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.002</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.052</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.052</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 10</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.002</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.051</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.051</td><td>%</td><td>GE</td></tr>
 </tbody></table>
 
 
@@ -281,34 +283,34 @@ $(document).ready(function(){
 <table class="clean_table">
 <thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limit</th><th>Lower Limit</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
  <tr><td>test 1</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 2</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.002</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.002</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 3</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.002</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 4</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.014</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.014</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 5</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.011</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.011</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 6</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.007</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.007</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 7</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.012</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.012</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 8</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.006</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.006</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 9</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.007</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.007</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 10</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.003</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.011</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.011</td><td>%</td><td>GE</td></tr>
 </tbody></table>
 
 
@@ -321,34 +323,34 @@ $(document).ready(function(){
 <table class="clean_table">
 <thead><tr><th></th><th>Test Number</th><th>P/F</th><th>Upper Limit</th><th>Lower Limit</th><th>Measurement</th><th>Unit</th><th>Test Name</th></tr></thead><tbody>
  <tr><td>test 1</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 2</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.001</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.001</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 3</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 4</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.009</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 5</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.001</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.001</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 6</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.002</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.002</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 7</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.014</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.014</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 8</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.001</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>-0.001</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 9</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.004</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.004</td><td>%</td><td>GE</td></tr>
  <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
  <tr><td>test 10</td><td>2.1</td><td>P</td><td>0.01</td><td>-0.01</td><td>0.001</td><td>V</td><td>ZSE</td></tr>
- <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.002</td><td>V</td><td>GE</td></tr>
+ <tr><td>&nbsp;</td><td>2.2</td><td>P</td><td>0.6</td><td>-0.6</td><td>0.002</td><td>%</td><td>GE</td></tr>
 </tbody></table>
 
 
