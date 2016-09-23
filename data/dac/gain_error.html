@@ -112,7 +112,7 @@ The gain error is calcualted by subtracting the zero-scale error from the full-s
 <p>This data set shows the measurements made on 5 different chips, 10 measurements/chip, for two different DIB sites.
 Looking through this dataset, students can start to see the effects of repeatability (looking across the 10 measurements/chip), reproducibility (looking across the different DIB sites with the same chip), 
 and process variation (looking across different chips with the same site).
-For all of these measurements, each result represents an average of 5 measurements using a volt meter (QMS) placed in the 10V range with an output low-pass filter cut-off frequency of 100kHz.</p>
+For all of these measurements, each result represents an average of 5 measurements using a voltmeter (QMS) placed in the 10V range with an output low-pass filter cut-off frequency of 100kHz.</p>
 <div1>
 
 <br></br>
@@ -516,7 +516,8 @@ For all of these measurements, each result represents an average of 5 measuremen
 <br></br>
 
 <label><b>10 Measurements Per Point     </b><button id="show2">Show</button> <button id="hide2">Hide</button></label>
-<p>10 measurements per point as opposed to 5</p>
+<p>The number of measurements averaged was increased to 10 for each result to see the accuracy-time trade-off associated with test and product engineering.
+Comparing the results to chip 1 site 1 in the previous dataset, it becomes clear that the results are more repeatable. The test time was only increased from 15.7ms to 15.8ms for this improvement in repeatability. </p>
 
 <div2>
 
@@ -559,7 +560,10 @@ For all of these measurements, each result represents an average of 5 measuremen
 <br></br>
 
 <label><b>1 Measurement Per Point     </b><button id="show3">Show</button> <button id="hide3">Hide</button></label>
-<p>1 measurement per point as opposed to 5</p>
+<p>The number of measurements averaged was decreased to 1 for each result.
+Comparing the results to chip 1 site 1 in the previous dataset, it becomes clear that the results are less repeatable. 
+The test time was dropped to 14.7ms. </p>
+
 
 <div3>
 
@@ -604,8 +608,9 @@ For all of these measurements, each result represents an average of 5 measuremen
 <br></br>
 
 <label><b>QMS 5V Range     </b><button id="show4">Show</button> <button id="hide4">Hide</button></label>
-<p>QMS set to 5V instead of 10V</p>
-
+<p>To see the effect of instrument ranging on the data, the voltmeter (QMS) range was decreased from 10V to 5V. 
+Comparing the results to chip 1 site 1 in the previous dataset, it becomes clear that the results are more repeatable.
+This result is due to a lower range increasing the resolution of the measurement. This change has no effect on test time. </p>
 <div4>
 
 
@@ -649,7 +654,9 @@ For all of these measurements, each result represents an average of 5 measuremen
 <br></br>
 
 <label><b>QMS 20V Range     </b><button id="show5">Show</button> <button id="hide5">Hide</button></label>
-<p>QMS set to 20V instead of 10V</p>
+<p>To see the effect of instrument ranging on the data, the voltmeter (QMS) range was increased to 20V. 
+Comparing the results to chip 1 site 1 in the previous dataset, it becomes clear that the results are less repeatable.
+This result is due to a higher range decreasing the resolution of the measurement.</p>
 
 <div5>
 
@@ -695,7 +702,9 @@ For all of these measurements, each result represents an average of 5 measuremen
 <br></br>
 
 <label><b>400kHz Filter     </b><button id="show6">Show</button> <button id="hide6">Hide</button></label>
-<p>QMS filter with 400kHz cutoff instead of 100kHz cutoff</p>
+<p>To see the effect of the output low-pass filter characteristics, the cutoff frequency was increased from 100kHz to 400kHz. 
+Comparing the results to chip 1 site 1 in the previous dataset, it becomes clear that a DC offset was introduced. 
+This result could be due to the instrument being used in a different mode causing different loading/offset voltages. </p>
 
 <div6>
 
@@ -738,7 +747,9 @@ For all of these measurements, each result represents an average of 5 measuremen
 <br></br>
 
 <label><b>10kHz Filter     </b><button id="show7">Show</button> <button id="hide7">Hide</button></label>
-<p>QMS filter with 10kHz cutoff instead of 100kHz cutoff</p>
+<p>To see the effect of the output low-pass filter characteristics, the cutoff frequency was decreased to 10kHz. 
+All gain-error results fail because the measurements take longer to settle. The filter, introducing different loading conditions,
+effect the settling characteristics of the circuit. </p>
 
 <div7>
 
@@ -784,7 +795,9 @@ For all of these measurements, each result represents an average of 5 measuremen
 <br></br>
 
 <label><b>12-bit QMS ADC     <button id="show8">Show</button> <button id="hide8">Hide</button></b></label>
-<p>12-bit QMS ADC intstead of 16-bit</p>
+<p>To see the effect of the instrument data converter resolution, the voltmeter (QMS) ADC resolution was lowered to 12-bit from 16-bit. 
+Comparing the results to chip 1 site 1 in the previous dataset, it becomes clear that the results are much less repeatable.
+While a lower-resolution ADC inside the instrument can take measurements faster, they are not as accurate. </p>
 
 <div8>
 
