@@ -636,7 +636,10 @@ For all of these measurements, each result represents an average of 40 measureme
 <br></br>
 
 <label><b>5us Delay     </b><button id="show4">Show</button> <button id="hide4">Hide</button></label>
-
+<p>This data set shows the effect of decreasing the time between measurements. The time between measurements effects the settling time and can sometimes average out small oscillations.  
+40 measurements were averaged for each result, but the time between the measurements was reduced from 13us to 5us. 
+While the repeatability was changed slightly for DNL and INL it was not changed significantly.
+</p>
 <div4>
 
 
@@ -684,7 +687,10 @@ For all of these measurements, each result represents an average of 40 measureme
 <br></br>
 
 <label><b>30us Delay     </b><button id="show5">Show</button> <button id="hide5">Hide</button></label>
-
+<p>In this data set, the time between measurements was increased.
+40 measurements were averaged for each result, but the time between the measurements was increased to 30us. 
+While the repeatability was changed slightly for both DNL and INL, it was not changed significantly.
+</p>
 <div5>
 
 
@@ -733,7 +739,10 @@ For all of these measurements, each result represents an average of 40 measureme
 <br></br>
 
 <label><b>QMS High-Precision Mode     </b><button id="show6">Show</button> <button id="hide6">Hide</button></label>
-
+<p> This data set shows the impact of placing the voltage measurement unit in high-precision mode. 
+This mode determines the DC offset of the measurements, removes that DC offset, and lowers the range of the instrument to obtain more accurage measurements.
+These results show a significant improvement in the repeatability of DNL and INL while only increasing the test time from 11.35 seconds to 11.91 seconds.
+</p>
 <div6>
 
 
@@ -779,7 +788,13 @@ For all of these measurements, each result represents an average of 40 measureme
 <br></br>
 
 <label><b>Too Many Steps in Vector Editor     </b><button id="show7">Show</button> <button id="hide7">Hide</button></label>
-
+<p> This data set shows what happens when the serial load timing is not performed correctly. 
+An extra clock cycle was placed before the data load which caused the DAC lose the last bit of the data stream. 
+As a result, all inputs are shifted right one place, or effectlive divided by 2. 
+The DNL data still looked OK, since the measurements were made between adjacent codes. 
+The INL data failed since the first measurement landed in the dead-zone, resulting in a skewed gain measurement.
+</p>
+<p> This result is particularly interesting since it shows how you can get a passing datalog with incorrect results.</p>
 <div7>
 
 
@@ -824,7 +839,10 @@ For all of these measurements, each result represents an average of 40 measureme
 <br></br>
 
 <label><b>Too Few Steps in Vector Editor     <button id="show8">Show</button> <button id="hide8">Hide</button></b></label>
-
+<p> This is another data set showing what happens when the serial load timing is not performed correctly. 
+If the DAC sees one too few clock cycles, the last bit in the data stream could be anything. 
+As a result, both DNL and INL fail.
+</p>
 <div8>
 
 
@@ -872,6 +890,12 @@ For all of these measurements, each result represents an average of 40 measureme
 <br></br>
 
 <label><b>Starting at Code 0     <button id="show9">Show</button> <button id="hide9">Hide</button></b></label>
+<p>This data set shows the effect of starting the measurements at code 0, rather that waiting until code 10. 
+The DAC could have a negative DC offset. In the DC offset range, all codes will convert to the same code, which equals VOS.
+As a result, the end-point method of calculating the curve representing the data points results in the wrong gain. Therefore, INL fails.
+However, DNL passes since it is based on neighboring codes and the specification allows for 1 LSB (or neighboring codes being equal).
+</p>
+<p> This result is particularly interesting since it shows how you can get a passing datalog with incorrect results.</p>
 <div9>
 
 
