@@ -69,8 +69,21 @@ $(document).ready(function(){
 
 <body>
 
+<p>
+The total harmonic distortion test was performed on the LF741 general-purpose op-amp. 
+The DIB shown in the Analog Test and Product Engineering Course was used.
+A 50MHz master clock was divided down to a 100kHz sample clock for an Arbitrary Waveform Generator (AWG) and digitizer.
+A 781.25Hz sine wave was input into the chip using the AWG. The signal was amplified using negative feedback to +/- 12V. 
+The result was digitized and evaluated for total harmonic distortion.
+</p>
+	
 <label><b>Chips 1-5, Sites 1 and 2     </b><button id="show1">Show</button> <button id="hide1">Hide</button></label>
-
+<p>
+This data set shows the measurements made on 5 different chips, 10 measurements/chip, for two different DIB sites. 
+Looking through this dataset, students can start to see the effects of repeatability (looking across the 10 measurements/chip), 
+reproducibility (looking across the different DIB sites with the same chip), and process variation (looking across different chips with the same site).
+The waveform was repeated three times to ensure all transients were removed from the measurements.
+</p>
 <div1>
 
 
@@ -378,7 +391,11 @@ $(document).ready(function(){
 <br></br>
 
 <label><b>1 MCU Loop     </b><button id="show2">Show</button> <button id="hide2">Hide</button></label>
-
+<p>
+This data set shows the impact of only running the input waveform 1 time. 
+There is very little change in the data showing that transients are not an issue for this test.
+In this case, running the waveform only once should be sufficient and save test time.
+</p>
 <div2>
 
 
@@ -413,7 +430,11 @@ $(document).ready(function(){
 <br></br>
 
 <label><b>6 MCU Loops     </b><button id="show3">Show</button> <button id="hide3">Hide</button></label>
-
+<p>
+This data set shows the impact of running the input waveform 6 times. 
+Again, there is very little change in the data showing that transients are not an issue for this test.
+In this case, running the waveform only once should be sufficient and save test time.
+</p>
 <div3>
 
 
