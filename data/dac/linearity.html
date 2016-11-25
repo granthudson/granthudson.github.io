@@ -118,8 +118,8 @@ Only the worst-case calculated DNL is datalogged.
 	<br> (Vout<sub>n</sub> - Vout<sub>n-1</sub> - VLSB)/VLSB.</br>
  </p>
 <p>The INL specification is calculated from the measurements by finding a line that approximiates the set of codes calculated using the end points (VOINL). 
-	<br> VINL<sub>n</sub> = Gain<sub>ep</sub>*Din+Vos</br>
-	<br>where Gain<ep =  (VO4095 - VO10)/(4095-10)</br>
+	<br> VINL<sub>n</sub>[i] = Gain<sub>ep</sub>*Din[i]+Vos</br>
+<br>where Gain<sub>ep</sub> =  (Vout<sub>4095</sub> - Vout<sub>10</sub>)/(4095-10)</br>
 </p>	  
 	
 <p>The INL is found by calculating the difference between each measurement and the line approximating the codes and normalizing the result by the measured gain. 
